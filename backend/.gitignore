@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional NPM cache directory
+.npm
+
+# Build files
+dist/
+build/
+
+# Temporary files and directories
+tmp/
+temp/
+*.tmp
+
+# Uploaded files
+uploads/
+
+# Editor and IDE settings
+.vscode/
+.idea/
+
+# Ignore any lock files
+package-lock.json
+yarn.lock
+
+# Coverage files
+coverage/
+
+# Additional files for certain operating systems
+*.swp
+*.swo
