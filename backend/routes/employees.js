@@ -4,7 +4,7 @@ const Employee = require('../models/Employee');
 const multer = require('multer');
 const path = require('path');
 
-// Set up multer for image uploads
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, './uploads/');
@@ -43,7 +43,7 @@ router.post('/', upload.single('image'), async (req, res) => {
   const { name, email, mobile, designation, gender, courses } = req.body;
   let imageUrl = '';
   
-  // Handle image upload
+  
   if (req.file) {
     imageUrl = `/uploads/${req.file.filename}`;
   }
@@ -63,7 +63,7 @@ router.put('/:id', upload.single('image'), async (req, res) => {
   const { name, email, mobile, designation, gender, courses } = req.body;
   let imageUrl = '';
   
-  // Handle image upload if present
+
   if (req.file) {
     imageUrl = `/uploads/${req.file.filename}`;
   }

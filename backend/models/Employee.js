@@ -29,7 +29,7 @@ const employeeSchema = new mongoose.Schema(
       type: String,
     },
   },
-  { timestamps: true } // This enables the 'createdAt' and 'updatedAt' fields
+  { timestamps: true } 
 );
 
 const Employee = mongoose.model('Employee', employeeSchema);
