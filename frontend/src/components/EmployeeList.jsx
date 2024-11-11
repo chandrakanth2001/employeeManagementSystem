@@ -7,7 +7,7 @@ const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch employee data from the server
+
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
@@ -23,7 +23,7 @@ const EmployeeList = () => {
     fetchEmployees();
   }, []);
 
-  // Handle delete employee
+
   const deleteEmployee = async (id) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this employee?');
     if (confirmDelete) {
@@ -52,7 +52,7 @@ const EmployeeList = () => {
                 <th>Designation</th>
                 <th>Gender</th>
                 <th>Course</th>
-                <th>Created At</th> {/* New column for Created At */}
+                <th>Created At</th> 
                 <th>Actions</th>
               </tr>
             </thead>
@@ -64,7 +64,7 @@ const EmployeeList = () => {
                   <td>{employee.mobile}</td>
                   <td>{employee.designation}</td>
                   <td>{employee.gender}</td>
-                  {/* <td>{employee.course}</td>  */}
+                  
                   <td>{Array.isArray(employee.course) ? employee.course.join(', ') : employee.course}</td> 
                   <td>{new Date(employee.createdAt).toLocaleDateString()}</td> {/* Display Created At */}
                   <td>

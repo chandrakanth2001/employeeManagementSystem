@@ -12,8 +12,8 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: acceptedFiles => {
       const file = acceptedFiles[0];
-      setImage(URL.createObjectURL(file)); // For previewing the image
-      setValue("image", file); // Store the file for form submission
+      setImage(URL.createObjectURL(file)); 
+      setValue("image", file); 
     },
     accept: 'image/*'
   });
@@ -21,21 +21,21 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
   const onSubmit = async (data) => {
     const formData = new FormData();
 
-    // Append required fields
+
     formData.append('name', data.name);
     formData.append('email', data.email);
     formData.append('mobile', data.mobile);
     formData.append('designation', data.designation);
     formData.append('gender', data.gender);
 
-    // Handle 'course' checkboxes as an array
+
     if (data.course && data.course.length > 0) {
       data.course.forEach(course => formData.append('course[]', course));
     }
 
-    // Handle image if present
+ 
     if (data.image) {
-      formData.append('image', data.image); // Directly append the image file
+      formData.append('image', data.image); 
     }
 
     try {
@@ -54,7 +54,7 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
     <div className="employee-form">
       <h2>{employee ? 'Edit Employee' : 'Add Employee'}</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* Name */}
+   
         <div className="form-group">
           <label>Name</label>
           <input
@@ -65,7 +65,6 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
           {errors.name && <p>{errors.name.message}</p>}
         </div>
 
-        {/* Email */}
         <div className="form-group">
           <label>Email</label>
           <input
@@ -76,7 +75,7 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
           {errors.email && <p>{errors.email.message}</p>}
         </div>
 
-        {/* Mobile */}
+    
         <div className="form-group">
           <label>Mobile</label>
           <input
@@ -87,7 +86,7 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
           {errors.mobile && <p>{errors.mobile.message}</p>}
         </div>
 
-        {/* Designation */}
+       
         <div className="form-group">
           <label>Designation</label>
           <select {...register('designation', { required: 'Designation is required' })}>
@@ -99,7 +98,7 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
           {errors.designation && <p>{errors.designation.message}</p>}
         </div>
 
-        {/* Gender */}
+       
         <div className="form-group">
           <label>Gender</label>
           <label>
@@ -123,7 +122,7 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
           {errors.gender && <p>{errors.gender.message}</p>}
         </div>
 
-        {/* Courses */}
+        
         <div className="form-group">
           <label>Courses</label>
           <label>
@@ -155,7 +154,7 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
           </label>
         </div>
 
-        {/* Image Upload */}
+        
         <div className="form-group">
           <label>Image</label>
           <div {...getRootProps()} className="dropzone">
@@ -164,7 +163,6 @@ const EmployeeForm = ({ employee = {}, onSubmitSuccess }) => {
           </div>
         </div>
 
-        {/* Submit Button */}
         <button type="submit">Submit</button>
       </form>
     </div>

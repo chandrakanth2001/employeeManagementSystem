@@ -11,14 +11,14 @@ const NavBar = () => {
   };
 
   const handleLogout = () => {
-    // Navigate to the login page
+   
     navigate('/');
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        {/* Add logo or brand text here if needed */}
+        
       </div>
       <button className="navbar-toggle" onClick={toggleMenu}>
         <span className="bar"></span>
@@ -29,7 +29,7 @@ const NavBar = () => {
         <ul className="navbar-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/admin">Employees</Link></li>
-          {/* Additional links can be added here */}
+          
         </ul>
         <button onClick={handleLogout} className="navbar-login">Log Out</button>
       </div>
