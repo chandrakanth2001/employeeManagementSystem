@@ -1,0 +1,98 @@
+/* Employee List Container */
+.employee-list {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .employee-list h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Table Styling */
+  .employee-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .employee-list th, 
+  .employee-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .employee-list th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .employee-list tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Buttons */
+  .edit-btn, .delete-btn, .add-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* Edit Button */
+  .edit-btn {
+    color: #fff;
+    background-color: #4CAF50;
+    transition: background-color 0.2s;
+  }
+  
+  .edit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    color: #fff;
+    background-color: #f44336;
+    transition: background-color 0.2s;
+  }
+  
+  .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Add Button */
+  .add-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.2s;
+  }
+  
+  .add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Loading Text */
+  .employee-list p {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+  }
+  

@@ -1,0 +1,99 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #d4cd0d;
+    color: #000000;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Brand/Logo */
+  .navbar-logo {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Navbar links */
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .navbar-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+  
+  .navbar-links a:hover {
+    color: #000000;
+  }
+  
+  /* Login button */
+  .navbar-login {
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .navbar-login:hover {
+    background-color: #ffffff;
+  }
+  
+  /* Toggle button for mobile */
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .navbar-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s;
+  }
+  
+  /* Responsive navbar menu */
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #fff200;
+    }
+  
+    .navbar-menu.open .navbar-links {
+      display: flex;
+    }
+  
+    .navbar-login {
+      display: block;
+      margin-top: 10px;
+    }
+  
+    .navbar-toggle {
+      display: flex;
+    }
+  }
+  
